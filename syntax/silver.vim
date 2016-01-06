@@ -16,26 +16,20 @@ endif
 syn match     silverFuncCall    "\w\(\w\)*("he=e-1,me=e-1
 
 " Basic keywords {{{2
-syn keyword   silverConditional match if else
+syn keyword   silverConditional match if else elseif
 
 
-syn keyword   silverKeyword     assume assert inhale exhale
-syn keyword   silverKeyword     fold folding unfold unfolding
-syn keyword   silverKeyword     domain
-syn keyword   silverKeyword     method
-syn keyword   silverKeyword     field
-syn keyword   silverKeyword     function
-syn keyword   silverKeyword     unique
-syn keyword   silverKeyword     predicate
-syn keyword   silverKeyword     axiom
-syn keyword   silverKeyword     forall
-syn keyword   silverKeyword     ensures requires
-syn keyword   silverKeyword     var
-syn match     silverIdentifier  contains=silverIdentifierPrime "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
-syn match     silverFuncName    "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
+syn keyword   silverKeyword      acc assert assume axiom constraining define domain
+syn keyword   silverKeyword      ensures epsilon exhale exists false field fold
+syn keyword   silverKeyword      forall fresh function goto in inhale intersection
+syn keyword   silverKeyword      invariant method new none null old perm predicate program 
+syn keyword   silverKeyword      requires result returns setminus subset true unfold 
+syn keyword   silverKeyword      unfolding union unique var while wildcard write
+syn match     silverIdentifier   contains=silverIdentifierPrime "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
+syn match     silverFuncName     "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
 
 " Built-in types {{{2
-syn keyword   silverType        Int Ref Bool
+syn keyword   silverType         Bool Int Multiset Perm Ref Seq Set
 
 syn match     silverOperator     display "\%(\:\|+\|-\|/\|*\|=\|\^\|&\||\|!\|>\|<\|%\)=\?"
 syn match     silverOperator     display "&&\|||\|==>"
