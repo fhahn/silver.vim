@@ -1,9 +1,8 @@
 " Vim syntax file
+" heavily inspired by rust.vim
 " Language:     Silver
-" Maintainer:   Patrick Walton <pcwalton@mozilla.com>
-" Maintainer:   Ben Blum <bblum@cs.cmu.edu>
-" Maintainer:   Chris Morgan <me@chrismorgan.info>
-" Last Change:  October 20, 2015
+" Maintainer:   Florian Hahn <flo@fhahn.com>
+" Last Change:  March 20, 2016
 
 if version < 600
   syntax clear
@@ -24,7 +23,8 @@ syn keyword   silverKeyword      ensures epsilon exhale exists false field fold
 syn keyword   silverKeyword      forall fresh function goto in inhale intersection
 syn keyword   silverKeyword      invariant method new none null old perm predicate program 
 syn keyword   silverKeyword      requires result returns setminus subset true unfold 
-syn keyword   silverKeyword      unfolding union unique var while wildcard write
+syn keyword   silverKeyword      union unique var while wildcard write
+syn keyword   silverKeyword      unfolding folding applying packaging
 syn match     silverIdentifier   contains=silverIdentifierPrime "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
 syn match     silverFuncName     "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
 
